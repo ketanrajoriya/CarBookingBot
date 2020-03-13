@@ -1,0 +1,301 @@
+{
+  "luis_schema_version": "4.0.0",
+  "versionId": "0.1",
+  "name": "CarBookingBot-a4a6",
+  "desc": "Luis Model for CoreBot",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "BookCab"
+    },
+    {
+      "name": "Cancel"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [
+    {
+      "name": "From",
+      "children": [
+        "Aiport"
+      ],
+      "roles": []
+    },
+    {
+      "name": "To",
+      "children": [
+        "Aiport"
+      ],
+      "roles": []
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "Aiport",
+      "subLists": [
+        {
+          "canonicalForm": "Gwalior",
+          "list": [
+            "gwalior"
+          ]
+        },
+        {
+          "canonicalForm": "Delhi",
+          "list": [
+            "delhi",
+            "new delhi"
+          ]
+        },
+        {
+          "canonicalForm": "Noida",
+          "list": [
+            "noida"
+          ]
+        },
+        {
+          "canonicalForm": "Gurugram",
+          "list": [
+            "gurgaon"
+          ]
+        },
+        {
+          "canonicalForm": "Hyderabad",
+          "list": [
+            "hderabad"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "book a cab",
+      "intent": "BookCab",
+      "entities": []
+    },
+    {
+      "text": "book a cab from noida",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "book a hotel in new york",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book a restaurant",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "book a taxi from delhi",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "book cab from noida to gwalior on feb 14th",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 14,
+          "endPos": 18
+        },
+        {
+          "entity": "To",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "book cab to gwalior on feb 14th",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "To",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "book me a cab from delhi to noida",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 19,
+          "endPos": 23
+        },
+        {
+          "entity": "To",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "bye",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "cab to gwalior",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "To",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "cab to noida from delhi on feb 14th",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "To",
+          "startPos": 7,
+          "endPos": 11
+        },
+        {
+          "entity": "From",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "cancel booking",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "find an airport near me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "go to noida",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "To",
+          "startPos": 6,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "going from noida to delhi",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "To",
+          "startPos": 20,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i'd like to rent a car",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ignore",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "travel from delhi to gwalior",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 12,
+          "endPos": 16
+        },
+        {
+          "entity": "To",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "travel from noida to delhi on may 5th",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "From",
+          "startPos": 12,
+          "endPos": 16
+        },
+        {
+          "entity": "To",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "travel to gwalior",
+      "intent": "BookCab",
+      "entities": [
+        {
+          "entity": "To",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "winter is coming",
+      "intent": "None",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
